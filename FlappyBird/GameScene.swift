@@ -112,12 +112,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         
         
         bird.physicsBody = SKPhysicsBody(circleOfRadius: bird.size.height / 2.0)
-        bird.physicsBody?.dynamic = true
-        bird.physicsBody?.allowsRotation = false
+        bird.physicsBody.dynamic = true
+        bird.physicsBody.allowsRotation = false
         
-        bird.physicsBody?.categoryBitMask = birdCategory
-        bird.physicsBody?.collisionBitMask = worldCategory | pipeCategory
-        bird.physicsBody?.contactTestBitMask = worldCategory | pipeCategory
+        bird.physicsBody.categoryBitMask = birdCategory
+        bird.physicsBody.collisionBitMask = worldCategory | pipeCategory
+        bird.physicsBody.contactTestBitMask = worldCategory | pipeCategory
         
         self.addChild(bird)
         
